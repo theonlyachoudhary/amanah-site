@@ -1,0 +1,54 @@
+import Link from 'next/link';
+type InfoCardProps ={
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  link?: string;
+}
+
+export default function InfoCard({ title, description, icon, link }: InfoCardProps) {
+  if (!link) {link="/"};
+  return (
+    <Link
+      href={link}
+      className={`
+        group
+        w-[400px] h-[300px] mx-auto bg-[var(--primary-white)]
+        border-[var(--primary-color)] border-5 rounded-[15px]
+        flex flex-col items-center
+        relative
+        transition-colors duration-300
+        cursor-pointer
+        hover:text-[var(--primary-white)]
+      `}
+    >
+      {/* Uiverse-style animated overlay */}
+      <span
+        className="
+          absolute top-[-1px] left-[-3px] w-[calc(100%+5px)] h-[calc(100%+3px)]
+          bg-[var(--primary-color)]
+          rounded-[15px]
+          z-0
+          scale-0 origin-top-right
+          group-hover:scale-100
+          transition-transform duration-300
+          pointer-events-none
+        "
+        aria-hidden="true"
+      ></span>
+      <div className="flex items-center w-full mb-2 relative z-10 px-6">
+        <h3 className="text-xl font-semibold text-[24px] text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-8">
+          {title}
+        </h3>
+      </div>
+      <div className="absolute top-0 right-0 z-10">
+        <div className="text-4xl h-[72px] w-[72px] flex items-center justify-center bg-[var(--primary-color)] rounded-bl-[40px]">
+          {icon}
+        </div>
+      </div>
+      <p className="mb-4 px-6 text-[16px] text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
+        {description}
+      </p>
+    </Link>
+  );
+}
