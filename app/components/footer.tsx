@@ -18,7 +18,7 @@ export default function Footer() {
 
             <div className="ml-auto mr-4 px-4 my-4">
               <div>
-                <h2 className="inline-block font-black text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">QUICK LINKS</h2>
+                <h2 className="inline-block font-black text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Quick Links</h2>
               </div>
               <ul className="grid grid-cols-2 gap-x-3 leading-8 ">
                 <li><Link href="#" className="hover:text-[var(--secondary-color)]">Home</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
             {/* Contact Section with Icons */}
             <div className="my-4 ml-auto">
               <div>
-                <h2 className="inline-block font-black text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">CONTACT</h2>
+                <h2 className="inline-block font-black text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Contact</h2>
               </div>
               <ul className="leading-8">
                 <li className="flex items-center gap-2">

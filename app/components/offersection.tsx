@@ -16,19 +16,20 @@ export default function OfferSection({title, subtitle, description}: OfferSectio
           <p className="font-semibold text-[16px] text-black/65">{description}</p>
           <div className="flex flex-row flex-wrap gap-3 mt-6">
             <CheckCard
-              title="100% SECURE HOSTING"
+              title="Domain Management"
+              description="We prefer to handle your domain for you, keeping your buisness safe from
+              unexpected downtime and domain sniping."
+            />
+            <CheckCard
+              title="100% Secure Hosting"
               description="We take care of everything behind the scenes—your site is hosted on secure, high-performance servers."
             />
             <CheckCard
-              title="100% SECURE HOSTING"
-              description="We take care of everything behind the scenes—your site is hosted on secure, high-performance servers."
+              title="Simple Edits"
+              description="Things change. So does a website. We'll make any edits needed, as long as you're with us."
             />
             <CheckCard
-              title="100% SECURE HOSTING"
-              description="We take care of everything behind the scenes—your site is hosted on secure, high-performance servers."
-            />
-            <CheckCard
-              title="100% SECURE HOSTING"
+              title="100%"
               description="We take care of everything behind the scenes—your site is hosted on secure, high-performance servers."
             />
           </div>
