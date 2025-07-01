@@ -4,16 +4,27 @@ import InfoSection from './components/infosection';
 import OfferSection from './components/offersection';
 import QualityBanner from './components/qualitybanner';
 import PricingSection from './components/pricingsection';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
     <>
-    <div className='bg-[var(--primary-color)] pt-[30px] mb-[100px]'>
-      <Header/>
-      <Hero/>
-      
-    </div>
-    <InfoSection
+      <div
+        className="pt-[30px] mb-[100px] min-h-screen"
+        style={{
+          background: `linear-gradient(
+            to bottom,
+            var(--primary-color) 0%,
+            #5D0E41 55%,
+            #A0153E 80%,
+            #FF204E 100%
+          )`,
+        }}
+      >
+        <Header />
+        <Hero />
+      </div>
+      <InfoSection
         title={"HANDLING THE HARD PARTS\nSO YOU DON'T HAVE TO"}
         subtitle="WHAT WE DO"
         description="At Amanah Web Designs, we create custom, hand-designed 
@@ -33,10 +44,10 @@ export default function Home() {
         so you can focus on what you do best. Our team is dedicated to
         providing high-quality, hand-crafted solutions that meet your unique
         needs."
-        />
-    <QualityBanner/>
-    <PricingSection/>
+      />
+      <QualityBanner />
+      <PricingSection />
+      <Footer />
     </>
-    
   );
 }

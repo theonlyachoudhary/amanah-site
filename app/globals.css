@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #273F4F;
-  --secondary-color: #FE7743;
-  --primary-white: #EFEEEA;
+  --primary-color: #00224D;
+  --secondary-color: #FF204E;
+  --primary-white: #EEEEEE;
   --green: #4CAF50;
 }
 
@@ -44,8 +44,8 @@ body {
 .custom-shape-divider-bottom-1750110347 svg {
   position: relative;
   display: block;
-  width: calc(150vw + 1.3px);
-  height: 50vh;
+  width: 145%;
+  height: 500px;
 }
 
 .custom-shape-divider-bottom-1750110347 .shape-fill {

@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import QualityCard from "./qualitycard";
-import QualityScoreCard
- from "./qualityscorecard";
+import QualityScoreCard from "./qualityscorecard";
+import ButtonAlt from "./buttonalt";
+
+
 export default function QualityBanner() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -41,6 +43,13 @@ export default function QualityBanner() {
               description="Our websites are optimized for speed and efficiency."
             />
           </div>
+            <div className="flex justify-end mt-8">
+            <ButtonAlt
+              label="Get Started"
+              link="/"
+            />
+            </div>
+ 
         </div>
 
         <div className="w-[45%] ml-auto mt-auto items-center">
