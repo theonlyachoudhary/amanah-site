@@ -13,7 +13,7 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
       href={link}
       className={`
         group
-        w-[400px] h-[300px] mx-auto bg-[var(--primary-white)]
+        w-full max-w-[400px] h-[250px] sm:h-[280px] md:h-[300px] mx-auto bg-[var(--primary-white)]
         border-[var(--primary-color)] border-5 rounded-[15px]
         flex flex-col items-center
         relative
@@ -36,17 +36,17 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
         "
         aria-hidden="true"
       ></span>
-      <div className="flex items-center w-full mb-2 relative z-10 px-6">
-        <h3 className="text-xl font-semibold text-[24px] text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-8">
+      <div className="flex items-center w-full mb-2 relative z-10 px-4 sm:px-6">
+        <h3 className="text-lg sm:text-xl md:text-[24px] font-semibold text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-6 sm:mt-8">
           {title}
         </h3>
       </div>
       <div className="absolute top-0 right-0 z-10">
-        <div className="text-4xl h-[72px] w-[72px] flex items-center justify-center bg-[var(--primary-color)] rounded-bl-[40px]">
+        <div className="text-2xl sm:text-3xl md:text-4xl h-[60px] w-[60px] sm:h-[72px] sm:w-[72px] flex items-center justify-center bg-[var(--primary-color)] rounded-bl-[30px] sm:rounded-bl-[40px]">
           {icon}
         </div>
       </div>
-      <p className="mb-4 px-6 text-[16px] text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
+      <p className="mb-4 px-4 sm:px-6 text-sm sm:text-base md:text-[16px] text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
         {description}
       </p>
     </Link>

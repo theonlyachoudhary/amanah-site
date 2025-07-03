@@ -1,16 +1,15 @@
-import Header from './components/header';
 import Hero from './components/hero';
 import InfoSection from './components/infosection';
 import OfferSection from './components/offersection';
 import QualityBanner from './components/qualitybanner';
 import PricingSection from './components/pricingsection';
-import Footer from './components/footer';
+
 
 export default function Home() {
   return (
     <>
       <div
-        className="pt-[30px] mb-[100px] min-h-screen"
+        className="min-h-[80vh]"
         style={{
           background: `linear-gradient(
             to bottom,
@@ -21,7 +20,6 @@ export default function Home() {
           )`,
         }}
       >
-        <Header />
         <Hero />
       </div>
       <InfoSection
@@ -44,7 +42,7 @@ export default function Home() {
       />
       <QualityBanner />
       <PricingSection />
-      <Footer />
+
     </>
   );
 }

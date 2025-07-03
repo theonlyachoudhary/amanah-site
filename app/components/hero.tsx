@@ -2,9 +2,9 @@ import Button from './button';
 import ButtonAlt from './buttonalt';
 export default function Hero() {
   return (
-    <section className='w-[70%] h-[70vh] mx-auto  '>
+    <section className='w-[70%] mx-auto pt-[100px]'>
       <div className='mr-auto w-[45%] text-left text-[var(--primary-white)]'>
-        <h1 className='font-black text-[64px] mt-[100px] leading-tight'>TRUSTWORTHY</h1>
+        <h1 className='font-black text-[64px] leading-tight'>TRUSTWORTHY</h1>
         <h1 className='font-black text-[64px] leading-none'>WEB DESIGNS</h1>
         <p className='font-semi-bold text-[20px] my-[10px]'>No page builders. No disappearing acts. Just a reliable partner focused on bringing you superior results, SEO, Google Ads, and the kind of support you’ll never get from the big guys. Starting at $150/mo.</p>
         <div className='flex gap-[20px] mt-[30px]'>
