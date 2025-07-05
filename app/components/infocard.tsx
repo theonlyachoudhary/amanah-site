@@ -37,7 +37,7 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
         aria-hidden="true"
       ></span>
       <div className="flex items-center w-full mb-2 relative z-10 px-4 sm:px-6">
-        <h3 className="text-lg sm:text-xl md:text-[24px] font-semibold text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-6 sm:mt-8">
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-6 sm:mt-8">
           {title}
         </h3>
       </div>
@@ -46,7 +46,7 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
           {icon}
         </div>
       </div>
-      <p className="mb-4 px-4 sm:px-6 text-sm sm:text-base md:text-[16px] text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
+      <p className="mb-4 px-4 sm:text-base md:text-lg lg:text-xl text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
         {description}
       </p>
     </Link>

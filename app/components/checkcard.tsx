@@ -27,9 +27,9 @@ export default function CheckCard({title, description}: CheckCardProps){
             </g>
           </svg>
         </div>
-        <h3 className="ml-4 text-[20px] font-semibold">{title}</h3>
+        <h3 className="ml-4 text-lg sm:text-xl lg:text-2xl font-semibold">{title}</h3>
       </div>
-      <p className="ml-12 text-black/70">{description}</p>
+      <p className="ml-12 sm:text-base md:text-lg lg:text-xl text-black/70">{description}</p>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import PricingCard from "./pricingcard";
 export default function PricingSection() {
   return(
-    <section className="w-full px-4 md:w-[85%] lg:w-[70%] mx-auto my-12 md:my-16 lg:my-20">
-      <h1 className="text-2xl md:text-3xl lg:text-[48px] font-black text-center mb-6 md:mb-8 lg:mb-10 leading-tight">PREMIUM PARTNERSHIP <br/>WITHOUT THE PREMIUM COST</h1>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-5">
+    <section className="w-full px-4  sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] mx-auto my-12 md:my-16 lg:my-20">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-6 md:mb-8 lg:mb-10 leading-tight">PREMIUM PARTNERSHIP <br/>WITHOUT THE PREMIUM COST</h1>
+      <div className="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap justify-center md:justify-between items-center gap-5">
         <PricingCard
           title="LUMP-SUM"
           price="$3K"

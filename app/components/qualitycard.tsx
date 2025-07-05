@@ -15,8 +15,8 @@ export default function QualityCard({ icon, title, description }: QualityCardPro
         />
       </div>
       <div className="flex flex-col justify-center text-[var(--primary-white)]">
-        <h2 className="text-sm sm:text-base lg:text-lg font-semibold mb-1">{title}</h2>
-        <p className="text-xs sm:text-sm lg:text-sm">{description}</p>
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-1">{title}</h2>
+        <p className="sm:text-base md:text-lg lg:text-xl">{description}</p>
       </div>
     </div>
   );

@@ -8,12 +8,12 @@ type OfferSectionProps = {
 
 export default function OfferSection({title, subtitle, description}: OfferSectionProps){
   return(
-    <section className="w-full px-4 md:w-[85%] lg:w-[70%] mx-auto mt-16 md:mt-24 lg:mt-[150px] text-left">
+    <section className="w-full px-4 sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] mx-auto mt-16 md:mt-24 lg:mt-[150px] text-left">
       <div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-6">
         <div className="w-full lg:w-[60%] flex flex-col flex-wrap gap-1">
-          <h3 className="font-bold text-xl md:text-2xl lg:text-[32px] text-black/80 leading-tight">{subtitle}</h3>
-          <h2 className="font-black text-3xl md:text-4xl lg:text-[48px] text-black leading-tight">{title}</h2>
-          <p className="font-semibold text-base md:text-lg lg:text-[16px] text-black/65 mb-4 lg:mb-0">{description}</p>
+          <h3 className="font-bold text-xl sm:text-2xl lg:text-3xl text-black/80 leading-tight">{subtitle}</h3>
+          <h2 className="font-black text-3xl sm:text-4xl lg:text-5xl text-black leading-tight">{title}</h2>
+          <p className="font-semibold sm:text-base md:text-lg lg:text-xl text-black/65 mb-4 lg:mb-0">{description}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 mt-4 lg:mt-6 justify-items-center sm:justify-items-start">
             <CheckCard
               title="Domain Management"

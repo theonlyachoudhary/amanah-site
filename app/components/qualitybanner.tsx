@@ -10,12 +10,12 @@ export default function QualityBanner() {
 
   return (
     <section className="bg-[var(--primary-color)] w-full py-6 md:py-8 lg:py-10 my-6 md:my-8 lg:my-10 flex flex-col items-center justify-center px-4">
-      <div className="w-full md:w-[85%] lg:w-[70%] flex flex-col lg:flex-row gap-8 lg:gap-0">
+      <div className=" sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] flex flex-col lg:flex-row gap-8 lg:gap-0">
         <div className="w-full lg:w-[45%] lg:mr-auto">
-          <h1 className="text-[var(--primary-white)] font-black text-2xl md:text-3xl lg:text-[48px] leading-tight text-center lg:text-left">
+          <h1 className="text-[var(--primary-white)] font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-center lg:text-left">
             WE BUILD FOR QUALITY<br />AND PERFORMANCE
           </h1>
-          <p className="text-[var(--primary-white)] text-sm md:text-base lg:text-[16px] font-semibold mt-4 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+          <p className="text-[var(--primary-white)] sm:text-base md:text-lg lg:text-xl font-semibold mt-4 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             The hardest part of development is design. That’s where we unfortunately see many of the 
             competition compromise, using templates or low-quality work. Here at Amanah, we work with our
             in-house designers to deliver thoughtful, handcrafted designs built specifically for your business. 

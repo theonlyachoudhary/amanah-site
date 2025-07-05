@@ -3,12 +3,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[var(--primary-color)]">
-      <div className="py-4 text-[var(--primary-white)]">
-        <div className="w-full px-4 md:w-[85%] lg:w-[70%] container mx-auto">
-          <div className="flex flex-col gap-6 lg:flex-row lg:flex-wrap lg:justify-between lg:gap-0">
-            <div className="pr-0 lg:pr-3 my-4 w-full lg:w-[60%]">
-              <h2 className="inline-block font-black text-xl md:text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Amanah Web Studio</h2>
-              <p className="text-left lg:text-justify text-sm md:text-base">
+      <div className="py-4 text-[var(--primary-white)] ">
+        <div className="w-full px-4 sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-8">
+            <div className="w-full lg:w-[50%]">
+              <h2 className="inline-block font-black text-xl sm:text-2xl lg:text-3xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Amanah Web Studio</h2>
+              <p className="text-left sm:text-base md:text-lg lg:text-xl">
                 Amanah Web Studio is an innovative web design and development company delivering handcrafted, 
                 high-quality websites—once reserved for large corporations—to small and medium-sized 
                 businesses at a fraction of the cost. Our unique subscription-based model makes it 
@@ -16,24 +16,25 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="ml-0 lg:ml-auto mr-0 lg:mr-4 px-0 lg:px-4 my-4">
+            <div className="w-full lg:w-[25%]">
               <div>
-                <h2 className="inline-block font-black text-xl md:text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Quick Links</h2>
+                <h2 className="inline-block font-black text-xl sm:text-2xl lg:text-3xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Quick Links</h2>
               </div>
-              <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-x-3 gap-y-1 leading-6 md:leading-8 text-sm md:text-base">
+              <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-3 gap-y-1 leading-6 md:leading-8 sm:text-base md:text-lg lg:text-xl ">
                 <li><Link href="#" className="hover:text-[var(--secondary-color)]">Home</Link></li>
                 <li><Link href="#" className="hover:text-[var(--secondary-color)]">About</Link></li>
                 <li><Link href="#" className="hover:text-[var(--secondary-color)]">Services</Link></li>
                 <li><Link href="#" className="hover:text-[var(--secondary-color)]">Pricing</Link></li>
-                <li><Link href="#" className="hover:text-[var(--secondary-color)]">Contact</Link></li>                </ul>
+                <li><Link href="#" className="hover:text-[var(--secondary-color)]">Contact</Link></li>
+              </ul>
             </div>
 
             {/* Contact Section with Icons */}
-            <div className="my-4 ml-0 lg:ml-auto">
+            <div className="w-full lg:w-[25%]">
               <div>
-                <h2 className="inline-block font-black text-xl md:text-2xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Contact</h2>
+                <h2 className="inline-block font-black text-xl sm:text-2xl lg:text-3xl pb-4 mb-4 border-b-3 border-[var(--primary-white)]">Contact</h2>
               </div>
-              <ul className="leading-6 md:leading-8 text-sm md:text-base space-y-2">
+              <ul className="leading-6 md:leading-8 sm:text-base md:text-lg lg:text-xl space-y-2">
                 <li className="flex items-center gap-2">
                   <span>
                     {/* Phone Icon */}
@@ -62,7 +63,8 @@ export default function Footer() {
                     </svg>
                   </span>
                   <span>Chicago, USA</span>
-                </li>                </ul>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -73,10 +75,10 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="-mx-4 flex flex-col sm:flex-row flex-wrap justify-between gap-2 sm:gap-0">
 
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left text-sm md:text-base">
+            <div className="px-4 w-full text-center sm:w-auto sm:text-base md:text-lg lg:text-xl">
               Copyright © {new Date().getFullYear()} Al-Amanah. All Rights Reserved.
             </div>
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left text-sm md:text-base">
+            <div className="px-4 w-full text-center sm:w-auto sm:text-left sm:text-base md:text-lg lg:text-xl">
               Striving for the Ummah
             </div>
           </div>

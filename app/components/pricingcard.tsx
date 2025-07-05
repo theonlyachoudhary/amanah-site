@@ -13,8 +13,8 @@ type PricingCardProps = {
 export default function PricingCard({title, price, subprice, isAlt}: PricingCardProps){
 
   return (
-    <div className={`${isAlt ? "bg-[var(--primary-color)]" : "bg-[var(--primary-white)]"} w-full max-w-[430px] h-auto min-h-[550px] md:min-h-[600px] lg:h-[650px] flex flex-col p-4 sm:p-6 lg:p-8 mx-auto border-[var(--primary-color)] border-5 rounded-[20px]`}>
-      <div className={`${isAlt ? "text-[var(--primary-white)]" : ""} text-center text-2xl md:text-3xl lg:text-[40px] font-black w-full mb-4 md:mb-6`}>{title}</div>
+    <div className={`${isAlt ? "bg-[var(--primary-color)]" : "bg-[var(--primary-white)]"} w-full max-w-[430px] flex flex-col sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] py-4 mx-auto border-[var(--primary-color)] border-5 rounded-[20px]`}>
+      <div className={`${isAlt ? "text-[var(--primary-white)]" : ""} text-center text-3xl md:text-4xl font-black w-full mb-4 md:mb-6`}>{title}</div>
 
       <FeatureCard
         description="Web Hosting"

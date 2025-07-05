@@ -33,7 +33,7 @@ export default function ButtonAlt({ label, link }: ButtonAltProps) {
         "
         aria-hidden="true"
       ></span>
-      <span className="relative z-10">{label}</span>
+      <span className="relative text-lg lg:text-xl z-10">{label}</span>
     </Link>
   );
 }

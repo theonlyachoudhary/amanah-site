@@ -28,7 +28,7 @@ export default function Button({ label, link }: ButtonProps) {
         "
         aria-hidden="true"
       ></span>
-      <span className="relative z-10 w-full">{label}</span>
+      <span className="relative text-lg lg:text-xl z-10 w-full">{label}</span>
     </Link>
   );
 }
