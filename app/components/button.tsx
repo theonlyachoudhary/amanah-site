@@ -11,7 +11,7 @@ export default function Button({ label, link }: ButtonProps) {
       href={link}
       className={`
         group
-        w-[240px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--secondary-color)]
+        w-full max-w-[240px] min-w-[160px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--secondary-color)]
         text-[var(--primary-color)] font-black
         relative overflow-hidden
         transition-colors duration-300
@@ -28,7 +28,7 @@ export default function Button({ label, link }: ButtonProps) {
         "
         aria-hidden="true"
       ></span>
-      <span className="relative text-lg lg:text-xl z-10 w-full">{label}</span>
+      <span className="relative text-base lg:text-lg z-10 w-full">{label}</span>
     </Link>
   );
 }

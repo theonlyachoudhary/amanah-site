@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <section className='w-[70%] mx-auto pt-[100px]'>
       <div className='mr-auto w-[45%] text-left text-[var(--primary-white)]'>
-        <h1 className='font-black text-4xl sm:text-5xl lg:text-6xl leading-tight'>TRUSTWORTHY</h1>
-        <h1 className='font-black text-4xl sm:text-5xl lg:text-6xl leading-none'>WEB DESIGNS</h1>
-        <p className='font-semi-bold text-lg md:text-xl lg:text-2xl my-[10px]'>No page builders. No disappearing acts. Just a reliable partner focused on bringing you superior results, SEO, Google Ads, and the kind of support you’ll never get from the big guys. Starting at $150/mo.</p>
+        <h1 className='font-black text-3xl sm:text-4xl lg:text-5xl leading-tight'>TRUSTWORTHY</h1>
+        <h1 className='font-black text-3xl sm:text-4xl lg:text-5xl leading-none'>WEB DESIGNS</h1>
+        <p className='font-semi-bold text-base md:text-lg lg:text-xl my-[10px]'>No page builders. No disappearing acts. Just a reliable partner focused on bringing you superior results, SEO, Google Ads, and the kind of support you'll never get from the big guys. Starting at $150/mo.</p>
         <div className='flex gap-[20px] mt-[30px]'>
           <Button label="Get Started" link="/contact" />
           <ButtonAlt label="Learn More" link="/about" />

@@ -8,33 +8,32 @@ type OfferSectionProps = {
 
 export default function OfferSection({title, subtitle, description}: OfferSectionProps){
   return(
-    <section className="w-full px-4 sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] mx-auto mt-16 md:mt-24 lg:mt-[150px] text-left">
-      <div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-6">
-        <div className="w-full lg:w-[60%] flex flex-col flex-wrap gap-1">
-          <h3 className="font-bold text-xl sm:text-2xl lg:text-3xl text-black/80 leading-tight">{subtitle}</h3>
-          <h2 className="font-black text-3xl sm:text-4xl lg:text-5xl text-black leading-tight">{title}</h2>
-          <p className="font-semibold sm:text-base md:text-lg lg:text-xl text-black/65 mb-4 lg:mb-0">{description}</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 mt-4 lg:mt-6 justify-items-center sm:justify-items-start">
+    <section className="w-full px-4 md:w-[90%] 2xl:w-[80%] mx-auto mt-16 md:mt-24 lg:mt-[150px] text-left">
+      <div className="flex flex-col lg:flex-col xl:flex-row w-full gap-6 lg:gap-6">
+        <div className="w-full xl:w-[60%] flex flex-col flex-wrap gap-1">
+          <h3 className="font-bold text-lg sm:text-xl lg:text-2xl text-black/80 leading-none">{subtitle}</h3>
+          <h2 className="font-black text-3xl sm:text-4xl lg:text-5xl leading-none text-black">{title}</h2>
+          <p className="font-semibold text-sm sm:text-base md:text-lg text-black/65 mb-4 lg:mb-0">{description}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-4 lg:mt-6 justify-items-start">
             <CheckCard
               title="Domain Management"
-              description="We prefer to handle your domain for you, keeping your buisness safe from
-              unexpected downtime and domain sniping."
+              description="We handle your domain to protect against downtime and security threats."
             />
             <CheckCard
               title="100% Secure Hosting"
-              description="We take care of everything behind the scenes—your site is hosted on secure, high-performance servers."
+              description="Secure, high-performance servers with daily backups and SSL encryption."
             />
             <CheckCard
               title="Simple Edits"
-              description="Things change. So does the content of a website. We'll make any edits needed, as long as you're with us."
+              description="Need changes? We'll handle any content updates while you're with us."
             />
             <CheckCard
               title="100% Long-Term Support"
-              description="Once your site is live, we will never leave you hanging. We provide permanent support and maintenance for all our clients."
+              description="Permanent support and maintenance for all our clients—we never leave you hanging."
             />
           </div>
         </div>
-        <div className="bg-[var(--primary-color)] w-full lg:w-[35%] h-[400px] sm:h-[500px] lg:h-[700px] rounded-[10px] lg:ml-auto shadow-lg order-first lg:order-last">
+        <div className="bg-[var(--primary-color)] w-full xl:w-[35%] h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[700px] rounded-[10px] xl:ml-auto shadow-lg order-first lg:order-first xl:order-last">
           {/* Additional content can go here */}
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function ButtonSecondary({link, label}: ButtonSecondaryProps){
       href={link}
       className={`
         group
-        w-[240px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-color)]
+        w-full max-w-[240px] min-w-[160px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-color)]
         text-[var(--primary-white)] font-black
         relative 
         transition-colors duration-300
@@ -28,7 +28,7 @@ export default function ButtonSecondary({link, label}: ButtonSecondaryProps){
         "
         aria-hidden="true"
       ></span>
-      <span className="relative text-lg lg:text-xl z-10">{label}</span>
+      <span className="relative text-base lg:text-lg z-10">{label}</span>
     </Link>
   );
 }

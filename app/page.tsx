@@ -23,7 +23,7 @@ export default function Home() {
         <Hero />
       </div>
       <InfoSection
-        title={"HANDLING THE HARD PARTS\nSO YOU DON'T HAVE TO"}
+        title={"HANDLING THE HARD PARTS SO YOU DON'T HAVE TO"}
         subtitle="WHAT WE DO"
         description="At Amanah Web Studios, we create custom, hand-designed,
         enterprise-level websites for small buisness who just want something better. Every line 

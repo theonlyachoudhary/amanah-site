@@ -5,31 +5,16 @@ type CheckCardProps = {
 
 export default function CheckCard({title, description}: CheckCardProps){
   return (
-    <div className="w-[350px] p-3 bg-[var(--primary-white)] flex flex-col">
+    <div className="min-w-[281px] bg-[var(--primary-white)] flex flex-col">
       <div className="flex items-start">
         <div className="flex-shrink-0">
-          <svg
-            className="w-8 h-8"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M7.5 12L10.5 15L16.5 9M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-                stroke="var(--green)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-            </g>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-9 h-9 text-[var(--green)]">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
           </svg>
         </div>
-        <h3 className="ml-4 text-lg sm:text-xl lg:text-2xl font-semibold">{title}</h3>
+        <h3 className="ml-5 text-lg sm:text-xl lg:text-2xl font-semibold">{title}</h3>
       </div>
-      <p className="ml-12 sm:text-base md:text-lg lg:text-xl text-black/70">{description}</p>
+      <p className="ml-14 text-sm sm:text-base md:text-lg text-black/70">{description}</p>
     </div>
   );
 }

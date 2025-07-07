@@ -13,42 +13,35 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
       href={link}
       className={`
         group
-        w-full max-w-[400px] h-[250px] sm:h-[280px] md:h-[300px] mx-auto bg-[var(--primary-white)]
-        border-[var(--primary-color)] border-5 rounded-[15px]
-        flex flex-col items-center
-        relative
-        transition-colors duration-300
+        w-full max-w-[350px] min-h-[280px] bg-[var(--primary-white)] border-2 border-gray-200 shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-6 md:p-8 lg:p-9 relative overflow-hidden rounded-[15px]
+        transition-all duration-300
         cursor-pointer
-        hover:text-[var(--primary-white)]
+        hover:shadow-[0px_0px_25px_rgba(0,0,0,0.15)]
+        hover:bg-[var(--primary-color)]
+        flex flex-col justify-between
       `}
     >
-      {/* Uiverse-style animated overlay */}
-      <span
-        className="
-          absolute top-[-1px] left-[-3px] w-[calc(100%+5px)] h-[calc(100%+3px)]
-          bg-[var(--primary-color)]
-          rounded-[15px]
-          z-0
-          scale-0 origin-top-right
-          group-hover:scale-100
-          transition-transform duration-300
-          pointer-events-none
-        "
-        aria-hidden="true"
-      ></span>
-      <div className="flex items-center w-full mb-2 relative z-10 px-4 sm:px-6">
-        <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-left w-2/3 break-words transition-colors duration-500 group-hover:text-white mt-6 sm:mt-8">
-          {title}
-        </h3>
+      {/* Top right circle with number/icon */}
+      <div className="w-20 h-20 md:w-24 md:h-24 bg-[var(--primary-color)] rounded-full absolute -right-4 md:-right-5 -top-6 md:-top-7 group-hover:bg-[var(--primary-white)] transition-colors duration-300">
       </div>
-      <div className="absolute top-0 right-0 z-10">
-        <div className="text-2xl sm:text-3xl md:text-4xl h-[60px] w-[60px] sm:h-[72px] sm:w-[72px] flex items-center justify-center bg-[var(--primary-color)] rounded-bl-[30px] sm:rounded-bl-[40px]">
+      
+      {/* Content Container */}
+      <div className="flex flex-col items-start text-left space-y-3 flex-grow">
+        {/* Main icon */}
+        <div className="w-10 md:w-12 text-[var(--primary-color)] group-hover:text-[var(--primary-white)] transition-colors duration-300 flex-shrink-0">
           {icon}
         </div>
+        
+        {/* Title */}
+        <h1 className="font-bold text-lg md:text-xl text-black group-hover:text-[var(--primary-white)] transition-colors duration-300 flex-shrink-0">
+          {title}
+        </h1>
+        
+        {/* Description */}
+        <p className="text-sm text-zinc-500 leading-6 group-hover:text-[var(--primary-white)] transition-colors duration-300 flex-grow">
+          {description}
+        </p>
       </div>
-      <p className="mb-4 px-4 sm:text-base md:text-lg lg:text-xl text-left text-black/70 group-hover:text-white/80 relative z-10 transition-colors duration-500 w-full">
-        {description}
-      </p>
     </Link>
   );
 }

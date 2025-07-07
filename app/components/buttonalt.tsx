@@ -11,7 +11,7 @@ export default function ButtonAlt({ label, link }: ButtonAltProps) {
       href={link}
       className={`
         group
-       w-[140px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-white)]
+        w-full max-w-[140px] min-w-[100px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-white)]
         text-[var(--primary-color)] font-black
         relative
         transition-all duration-300
@@ -33,7 +33,7 @@ export default function ButtonAlt({ label, link }: ButtonAltProps) {
         "
         aria-hidden="true"
       ></span>
-      <span className="relative text-lg lg:text-xl z-10">{label}</span>
+      <span className="relative text-base lg:text-lg z-10">{label}</span>
     </Link>
   );
 }
