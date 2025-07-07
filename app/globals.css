@@ -5,6 +5,10 @@
   --secondary-color: #FF204E;
   --primary-white: #EEEEEE;
   --green: #4CAF50;
+  
+  /* Responsive viewBox variables */
+  --svg-viewbox-width: 800;
+  --svg-viewbox-height: 80;
 }
 
 @theme inline {
@@ -30,24 +34,66 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.custom-shape-divider-bottom-1750110347 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    pointer-events: none; /* Add this line */
+.svg-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(120px, calc(10vh), 300px);
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.custom-shape-divider-bottom-1750110347 svg {
-  position: relative;
-  display: block;
-  width: 145%;
-  height: 500px;
+.svg-container svg {
+  width: 100%;
+  height: 100%;
 }
 
-.custom-shape-divider-bottom-1750110347 .shape-fill {
-    fill: var(--primary-white);
+.shape-fill {
+  fill: var(--primary-white);
+}
+
+/* Responsive viewBox adjustments */
+@media (min-width: 640px) {
+  :root {
+    --svg-viewbox-width: 1000;
+    --svg-viewbox-height: 100;
+  }
+  
+  .svg-container {
+    height: clamp(150px, calc(22vh), 350px);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --svg-viewbox-width: 1200;
+    --svg-viewbox-height: 120;
+  }
+  
+  .svg-container {
+    height: clamp(180px, calc(25vh), 400px);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --svg-viewbox-width: 1400;
+    --svg-viewbox-height: 140;
+  }
+  
+  .svg-container {
+    height: clamp(200px, calc(28vh), 450px);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --svg-viewbox-width: 1600;
+    --svg-viewbox-height: 160;
+  }
+  
+  .svg-container {
+    height: clamp(220px, calc(30vh), 500px);
+  }
 }

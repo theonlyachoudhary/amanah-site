@@ -1,16 +1,14 @@
 import Link from 'next/link';
+
 type InfoCardProps ={
   title: string;
   description: string;
   icon: React.ReactNode;
-  link?: string;
 }
 
-export default function InfoCard({ title, description, icon, link }: InfoCardProps) {
-  if (!link) {link="/"};
+export default function InfoCard({ title, description, icon }: InfoCardProps) {
   return (
-    <Link
-      href={link}
+    <div
       className={`
         group
         w-full max-w-[350px] min-h-[280px] bg-[var(--primary-white)] border-2 border-gray-200 shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-6 md:p-8 lg:p-9 relative overflow-hidden rounded-[15px]
@@ -42,6 +40,13 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
           {description}
         </p>
       </div>
-    </Link>
+
+      {/* Learn More text at bottom */}
+      <div className="mt-4">
+        <p className="text-[var(--primary-color)] group-hover:text-[var(--primary-white)] transition-colors duration-300 font-semibold text-sm">
+          Learn More
+        </p>
+      </div>
+    </div>
   );
 }

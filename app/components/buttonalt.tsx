@@ -11,7 +11,7 @@ export default function ButtonAlt({ label, link }: ButtonAltProps) {
       href={link}
       className={`
         group
-        w-full max-w-[140px] min-w-[100px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-white)]
+        w-[140px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-white)]
         text-[var(--primary-color)] font-black
         relative
         transition-all duration-300

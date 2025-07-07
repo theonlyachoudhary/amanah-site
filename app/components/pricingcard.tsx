@@ -71,8 +71,8 @@ export default function PricingCard({title, price, subprice, isAlt}: PricingCard
       }
 
       <div className="flex items-center justify-center w-full mt-auto">
-        <div className={`${isAlt ? "text-[var(--primary-white)]" : ""} text-2xl sm:text-3xl lg:text-4xl mr-2 font-black`}>{price}</div>
-        <div className={`text-lg sm:text-xl lg:text-2xl mt-1 ${isAlt ? "text-[var(--primary-white)]/70" : "text-black/70"} font-semibold`}>{subprice}</div>
+        <div className={`${isAlt ? "text-[var(--primary-white)]" : ""} text-xl sm:text-2xl lg:text-3xl mr-2 font-black`}>{price}</div>
+        <div className={`text-base sm:text-lg lg:text-xl mt-1 ${isAlt ? "text-[var(--primary-white)]/70" : "text-black/70"} font-semibold`}>{subprice}</div>
       </div>
 
       {isAlt &&

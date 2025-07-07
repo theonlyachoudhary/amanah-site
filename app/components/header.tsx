@@ -20,15 +20,16 @@ export default function Header() {
     <header className={`
       w-full sticky top-0 z-50
       transition-all duration-300 ease-in-out
+      g-[var(--primary-white)]
       ${isScrolled 
-        ? 'py-0 my-[20px] md:my-[30px] bg-[var(--primary-white)] shadow-lg' 
-        : 'py-[20px] md:py-[30px] bg-[var(--primary-color)]'
+        ? 'py-0 my-[20px] md:my-[30px] shadow-lg' 
+        : 'py-[20px] md:py-[30px]'
       }
     `}>
       <div className="relative"> {/* Add relative wrapper */}
         <div className={`
           bg-[var(--primary-white)] h-[70px] md:h-[80px] flex justify-center items-center mx-auto relative
-          transition-all duration-300 ease-in-out
+          transition-all duration-300 ease-in-out shadow-lg
           ${isScrolled 
             ? 'w-full rounded-none' 
             : `w-[95%] md:w-[75%] ${isMobileMenuOpen ? 'rounded-t-[8px] md:rounded-t-[10px]' : 'rounded-[8px] md:rounded-[10px]'}`
