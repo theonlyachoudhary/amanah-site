@@ -126,7 +126,7 @@ export default function QualityBanner() {
       <div className="flex justify-center mt-8">
         <ButtonAlt
           label="Get Started"
-          link="/"
+          link="/contact"
         />
       </div>
     </section>

@@ -7,31 +7,17 @@ type FeatureCardProps = {
 export default function FeatureCard({description, hasCheckmark, isAlt}: FeatureCardProps){
   
   return (
-    <>
+    <li className="flex gap-x-3">
       {hasCheckmark ? (
-        <div className={` ${isAlt ? "text-[var(--primary-white)]" : ""}
-        flex items-center justify-between px-[30px] py-2 w-full`}>
-          <h3 className="text-base sm:text-lg lg:text-xl text-left mr-auto">{description}</h3>
-          <span className="ml-auto flex items-center">
-            <svg viewBox="0 0 24 24" fill="none" width={30} height={30} xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke={`${isAlt ? "var(--primary-white)" : "#000000"}`} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
-            </svg>
-          </span>
-        </div>
+        <svg className="h-6 w-5 flex-none" style={{color: isAlt ? 'var(--primary-white)' : 'var(--primary-color)'}} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
+        </svg>
       ) : (
-        <div className={` ${isAlt ? "text-[var(--primary-white)]" : ""}
-        flex items-center justify-between px-[30px] py-2 w-full`}>
-          <h3 className="text-base sm:text-lg lg:text-xl text-left mr-auto">{description}</h3>
-          <span className="ml-auto flex items-center">
-            <svg viewBox="0 0 24 24" fill="none" width={30} height={30} xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 6L18 18" stroke={`${isAlt ? "var(--primary-white)" : "#000000"}`} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M6 18L18 6" stroke={`${isAlt ? "var(--primary-white)" : "#000000"}`} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </span>
-        </div>
+        <svg className="h-6 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clipRule="evenodd" />
+        </svg>
       )}
-    </>
+      <span className="text-sm sm:text-base md:text-lg">{description}</span>
+    </li>
   );
-
-      
 }

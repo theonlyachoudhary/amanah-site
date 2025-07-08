@@ -11,16 +11,18 @@ export default function Button({ label, link }: ButtonProps) {
       href={link}
       className={`
         group
-        w-full max-w-[240px] min-w-[160px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--secondary-color)]
-        text-[var(--primary-color)] font-black
-        relative overflow-hidden
+        w-full max-w-[240px] min-w-[160px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-white)]
+        text-[var(--primary-color)] hover:text-[var(--primary-white)]
+        font-black
+        relative 
         transition-colors duration-300
       `}
     >
       <span
         className="
           absolute left-0 top-0 h-full w-0
-          bg-[var(--primary-white)]
+          bg-[var(--primary-color)]
+          text-[var(--primary-white)]
           transition-all duration-300
           z-0
           group-hover:w-full

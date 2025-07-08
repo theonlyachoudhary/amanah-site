@@ -33,14 +33,14 @@ export default function OfferSection({title, subtitle, description}: OfferSectio
             />
           </div>
         </div>
-        <div className="bg-[var(--primary-color)] w-full xl:w-[35%] h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[700px] rounded-[10px] xl:ml-auto shadow-lg order-first lg:order-first xl:order-last">
+        <div className="bg-[var(--primary-color)] w-full xl:w-[35%] h-[300px] sm:h-[300px] lg:h-[400px] xl:h-[600px] rounded-[10px] xl:ml-auto shadow-lg order-first lg:order-first xl:order-last">
           {/* Additional content can go here */}
         </div>
       </div>
       <div className="flex justify-center mt-6 lg:mt-8">
         <ButtonSecondary
           label="Get Started"
-          link="/signup"
+          link="/contact"
         />
       </div>
     </section>
