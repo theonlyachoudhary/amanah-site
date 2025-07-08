@@ -9,7 +9,7 @@ type InfoSectionProps= {
 
 export default function InfoSection({ title, subtitle, description }: InfoSectionProps) {
   return (
-    <section className="px-4 py-8 md:py-12 lg:py-16 md:w-[90%] 2xl:w-[80%] mx-auto">
+    <section className="min-h-[80vh] flex flex-col justify-center px-4 py-16 md:py-20 lg:py-24 md:w-[90%] 2xl:w-[80%] mx-auto">
       <div className="flex flex-col text-left">
         <h3 className="font-bold text-lg sm:text-xl lg:text-2xl text-black/80 mb-2 leading-none whitespace-pre-line">{subtitle}</h3>
         <h2 className="font-black text-3xl sm:text-4xl lg:text-5xl text-black mb-4 leading-none whitespace-pre-line">{title}</h2>

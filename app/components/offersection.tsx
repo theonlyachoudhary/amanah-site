@@ -8,7 +8,7 @@ type OfferSectionProps = {
 
 export default function OfferSection({title, subtitle, description}: OfferSectionProps){
   return(
-    <section className="w-full px-4 md:w-[90%] 2xl:w-[80%] mx-auto mt-16 md:mt-24 lg:mt-[150px] text-left">
+    <section className="min-h-[90vh] flex flex-col justify-center w-full px-4 md:w-[90%] 2xl:w-[80%] mx-auto py-16 md:py-20 lg:py-24 text-left">
       <div className="flex flex-col lg:flex-col xl:flex-row w-full gap-6 lg:gap-6">
         <div className="w-full xl:w-[60%] flex flex-col flex-wrap gap-1">
           <h3 className="font-bold text-lg sm:text-xl lg:text-2xl text-black/80 leading-none">{subtitle}</h3>

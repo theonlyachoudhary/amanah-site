@@ -8,20 +8,9 @@ import PricingSection from './components/pricingsection';
 export default function Home() {
   return (
     <>
-      <div
-        className="min-h-[80vh]"
-        style={{
-          background: `linear-gradient(
-            to bottom,
-            var(--primary-color) 0%,
-            #5D0E41 55%,
-            #A0153E 80%,
-            #FF204E 100%
-          )`,
-        }}
-      >
-        <Hero />
-      </div>
+
+      <Hero />
+      
       <InfoSection
         title={"HANDLING THE HARD PARTS SO YOU DON'T HAVE TO"}
         subtitle="WHAT WE DO"

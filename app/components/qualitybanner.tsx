@@ -9,7 +9,7 @@ export default function QualityBanner() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <section className="bg-[var(--primary-color)] w-full py-6 md:py-8 lg:py-10 my-6 md:my-8 lg:my-10 flex flex-col items-center justify-center px-4">
+    <section className="bg-[var(--primary-color)] w-full min-h-[85vh] flex flex-col items-center justify-center py-16 md:py-20 lg:py-24 my-16 md:my-20 lg:my-24 px-4">
       <div className="sm:w-[95%] md:w-[90%] 2xl:w-[80%] flex flex-col xl:flex-row gap-8 xl:gap-12">
         <div className="w-full xl:w-[55%]">
           <h1 className="text-[var(--primary-white)] font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-left">
