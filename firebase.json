@@ -17,7 +17,8 @@
     }
   ],
   "hosting": {
-    "public": "public",
+    "public": "out",
+    "site": "al-amanah-117-6128d",
     "ignore": [
       "firebase.json",
       "**/.*",
