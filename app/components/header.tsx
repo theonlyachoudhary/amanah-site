@@ -29,7 +29,7 @@ export default function Header() {
     <header className={`
       w-full sticky top-0 z-50
       transition-all duration-300 ease-in-out
-      bg-[var(--primary-white)]
+      bg-[var(--primary-color)] 
       ${isScrolled 
         ? 'py-0 my-[20px] md:my-[30px] shadow-lg' 
         : 'py-[20px] md:py-[30px]'
@@ -76,9 +76,8 @@ export default function Header() {
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
-              <Link
-                href="/services"
-                className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full flex items-center`}
+              <span
+                className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap cursor-pointer flex items-center`}
               >
                 SERVICES
                 <svg 
@@ -90,7 +89,7 @@ export default function Header() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
-              </Link>
+              </span>
               
               {/* Dropdown Menu with gap bridge */}
               <div className={`

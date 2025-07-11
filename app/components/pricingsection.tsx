@@ -19,7 +19,7 @@ export default function PricingSection() {
           <PricingCard
             title="LUMP-SUM"
             price="$3K"
-            subprice="+ $30/mo"
+            subprice="starting"
             isAlt={false}
           />
         </div>

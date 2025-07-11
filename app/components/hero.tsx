@@ -6,29 +6,7 @@ export default function Hero() {
     <div className="relative overflow-x-hidden bg-[var(--primary-white)]">
       {/* Background SVGs covering the entire hero section */}
       <div className="absolute inset-0 hidden overflow-hidden md:block">
-        {/* Giant Phone on Left Third - Ultra Subtle Background Element */}
-        <div className="hidden lg:block absolute left-[7%] top-1/2 -translate-y-3/4 opacity-30" style={{ filter: 'blur(2px)' }}>
-          <div className="relative">
-            <svg className="h-72 w-72 lg:h-80 lg:w-80" fill="none" viewBox="0 0 24 24" strokeWidth=".15" stroke="currentColor" style={{ color: 'var(--primary-color)' }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-            </svg>
-            {/* Multi-layer gradient overlay for maximum subtlety */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/10 to-white/50 pointer-events-none"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent pointer-events-none"></div>
-          </div>
-        </div>
-
-        {/* Giant Laptop on Right Third - Ultra Subtle Background Element */}
-        <div className="hidden lg:block absolute right-[7%] top-1/2 -translate-y-3/4 opacity-30" style={{ filter: 'blur(2px)' }}>
-          <div className="relative">
-            <svg className="h-72 w-72 lg:h-80 lg:w-80" fill="none" viewBox="0 0 24 24" strokeWidth=".15" stroke="currentColor" style={{ color: 'var(--primary-color)' }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-            </svg>
-            {/* Multi-layer gradient overlay for maximum subtlety */}
-            <div className="absolute inset-0 bg-gradient-to-bl from-white/40 via-white/10 to-white/50 pointer-events-none"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent pointer-events-none"></div>
-          </div>
-        </div>
+        
 
           {/* Top row - much wider distribution */}
           {/* Computer/Monitor icon - top left */}
