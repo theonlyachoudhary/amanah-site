@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
+
 import { useEffect, useState } from 'react';
+import ButtonSecondary from './buttonsecondary';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,35 +31,51 @@ export default function Header() {
     <header className={`
       w-full sticky top-0 z-50
       transition-all duration-300 ease-in-out
-      bg-[var(--primary-color)] 
-      ${isScrolled 
-        ? 'py-0 my-[20px] md:my-[30px] shadow-lg' 
-        : 'py-[20px] md:py-[30px]'
-      }
+      bg-[var(--primary-color)]
+      ${isScrolled
+        ? 'py-0 my-[20px] md:my-[30px] shadow-lg'
+        : 'py-[20px] md:py-[30px]'}
     `}>
       <div className="relative">
         <div className={`
-          bg-[var(--primary-white)] h-[70px] md:h-[80px] flex justify-center items-center mx-auto relative
+          bg-[var(--primary-white)] h-[70px] md:h-[80px] flex items-center mx-auto relative
           transition-all duration-300 ease-in-out shadow-lg
-          ${isScrolled 
-            ? 'w-full rounded-none' 
+          ${isScrolled
+            ? 'w-full rounded-none'
             : `w-[95%] md:w-[75%] ${isMobileMenuOpen ? 'rounded-t-[8px] md:rounded-t-[10px]' : 'rounded-[8px] md:rounded-[10px]'}`
           }
         `}>
-          {/* Mobile Hamburger Button - Right Side */}
-          <button
-            className="bg-[var(--primary-color)] rounded-[8px] md:hidden absolute right-4 flex flex-col justify-center items-center w-10 h-10 space-y-1"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-          </button>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center justify-center flex-wrap">
-            <Link
+          {/* Desktop: flex-row, logo left, menu center, button right. Mobile: unchanged */}
+          <div className="flex w-full items-center">
+            {/* Logo - left on all screens */}
+            <div className="flex items-center ml-6 md:ml-6 md:mr-4 w-full md:w-auto justify-start static">
+              <svg className="h-[2.5em] md:h-[2.8em] w-auto" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Main monitor shape */}
+                <rect x="2" y="4" width="36" height="24" rx="4" stroke="var(--primary-color)" strokeWidth="2.5" fill="none" />
+                {/* Browser dots */}
+                <circle cx="7.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                <circle cx="12.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                <circle cx="17.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                {/* Web grid (subtle) */}
+                <g opacity="0.25">
+                  <line x1="6" y1="12" x2="36" y2="12" stroke="var(--primary-color)" strokeWidth="0.8" />
+                  <line x1="6" y1="18" x2="36" y2="18" stroke="var(--primary-color)" strokeWidth="0.8" />
+                  <line x1="14" y1="8" x2="14" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
+                  <line x1="22" y1="8" x2="22" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
+                </g>
+                {/* Content lines */}
+                <rect x="10" y="15" width="16" height="2" rx="1" fill="var(--primary-color)" />
+                <rect x="14" y="19" width="8" height="2" rx="1" fill="var(--primary-color)" />
+              </svg>
+              <span className="ml-[1px] flex flex-col leading-tight select-none">
+                <span className="text-xl md:text-2xl font-bold tracking-tight" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Amanah</span>
+                <span className="text-base md:text-lg font-base tracking-tight -mt-2" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Web Studio</span>
+              </span>
+            </div>
+            {/* Desktop Navigation Centered */}
+            <div className="hidden md:flex flex-1 items-center justify-center relative">
+              <div className="flex items-center justify-center flex-wrap mx-auto xl:pr-48">
+                <Link
               href="/"
               className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full`}
             >
@@ -136,17 +154,29 @@ export default function Header() {
               PRICING
             </Link>
             <Link
-              href="/contact"
-              className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full`}
+                href="/contact"
+                className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full`}
+              >
+                CONTACT
+              </Link>
+              </div>
+              {/* Get Started Button (Button type 1) - only on xl screens */}
+              <div className="hidden xl:flex absolute right-0 items-center mr-6">
+                <ButtonSecondary link="/contact" label="Get Started" />
+              </div>
+            </div>
+            {/* Mobile Hamburger Button - Right Side */}
+            <button
+              className="bg-[var(--primary-color)] rounded-[8px] md:hidden absolute right-4 flex flex-col justify-center items-center w-10 h-10 space-y-1"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
-              CONTACT
-            </Link>
+              <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-[var(--primary-white)] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
           </div>
 
-          {/* Mobile Menu Title */}
-          <div className="md:hidden font-bold text-[15px] text-center">
-            MENU
-          </div>
         </div>
 
         {/* Mobile Menu Overlay - Now relative to header container */}

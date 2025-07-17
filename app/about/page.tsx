@@ -8,10 +8,10 @@ export default function AboutPage() {
   return (
     <>
       <SecondaryHero
-        title="ABOUT AMANAH WEB"
+        title="ABOUT US"
       />
       
-      {/* Arabic Greeting */}
+      {/* Arabic Greeting 
       <div className="px-4 py-8" style={{ backgroundColor: 'var(--primary-white)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-semibold text-2xl sm:text-3xl lg:text-4xl" style={{ color: 'var(--primary-color)' }}>
@@ -19,7 +19,8 @@ export default function AboutPage() {
           </h2>
         </div>
       </div>
-      
+      */}
+
       {/* Article Content Section */}
       <section className="px-4 py-16 md:py-20 lg:py-24 md:w-[90%] 2xl:w-[80%] mx-auto" style={{ backgroundColor: 'var(--primary-white)' }}>
         <div className="max-w-4xl mx-auto">
@@ -27,7 +28,7 @@ export default function AboutPage() {
             
             {/* Subtitle */}
             <p className="font-black text-3xl sm:text-4xl lg:text-5xl text-center mb-8 leading-none whitespace-pre-line" style={{ color: 'var(--primary-color)' }}>
-              Trusted Website Partner for Contractors & Small Businesses
+              The State of the Web is Broken
             </p>
             
             <hr className="border-black/10 mb-8" />
@@ -36,70 +37,45 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none">
               
               <ArticleSection 
-              title="Our Mission"
-              content="Amanah Web was founded with one clear mission: To help hardworking businesses succeed online—without the tech headaches.
+              title=""
+              content={`As the years go on, the quality of websites are getting worse and worse. Bloated. Broken. Built to be abandoned. And somehow, no one seems to take the blame.
 
-      We're not just another web design company. We're your long-term partner in growing your business, generating leads, and keeping your online presence running smoothly and securely. We believe small businesses deserve the same quality, performance, and support as the big guys—without the bloated price tags."
+                Meanwhile agencies and freelancers are making a quick buck ($$$) - leaving business owners stuck with a subpar site and even less money to show for it. Let’s be honest: developing a website for a business isn’t some some project you throw on your resume. It’s not a gig. It's a responsibility. Someone out there is relying on that site to transform their online presence and drive real sales. But just weeks after the launch, the developer is nowhere to be found.
+                `}
+              />
+
+
+
+              <ArticleSection 
+              title="This is Amanah Web Studios"
+              content={`We’re here to change that. Founded by a real developer who’s watched this industry rot from the inside, Amanah Web Studios is built on one simple belief: businesses deserve better. We’ve seen too many times - agencies churn out cookie cutter sites and disappear the moment the check clears. That’s not a website, that’s a liability. A real website is an extension of your business. Sometimes, it is your storefront. It has to reflect who you are. Evolve as your market does. And most importantly, it needs to be taken care of.
+
+                That’s what we do. We don’t disappear. We stick with you. We maintain, adapt, improve, and scale your digital presence – because that’s what a business actually needs.
+                `}
               />
 
               <ArticleSection 
-              title="Who We Serve"
-              content="We specialize in working with:
-
-      • General contractors
-      • HVAC companies  
-      • Electricians & plumbers
-      • Clinics, gyms, and local service providers
-      • Family-run and independent small businesses
-
-      If your time is better spent running your business than learning web jargon or dealing with unreliable freelancers—you're exactly who we built this for."
-              />
-
-              <ArticleSection 
-              title="Why We're Different"
-              content={`We handle the hard parts so you don't have to. Our promise:
-
-      • Every site is custom, hand-designed, and built for performance and SEO.
-      • We manage updates and edits for you—no disappearing after launch.
-      • Ongoing support, so you’re never left on your own.
-      • We build long-term partnerships based on honesty and results.
-      • No hidden fees, no surprise invoices—just clear, honest pricing.
-      `}
-              />
-
-              <ArticleSection 
-              title="Our Story"
-              content="Amanah Web began with a simple idea: What if small businesses had a web partner who actually cared about results?
-
-      Tired of seeing good companies stuck with slow, outdated, or overpriced websites, we built Amanah to offer enterprise-quality service on a small business budget.
-
-      Since 2018, we've launched 50+ websites for local businesses, refined our systems, and built a reputation for honest, reliable, and lead-focused work."
-              />
-
-              <ArticleSection 
-              title="What Does 'Amanah' Mean?"
-              content="The word 'Amanah' means trust, responsibility, and integrity. It's a value we take seriously. We believe business only works when people trust each other—so we've built our company around earning and keeping yours.
-
-      That means:
-      • We under-promise and over-deliver
-      • We prioritize long-term relationships, not one-time invoices  
-      • We treat your business like it's our own"
-              />
-
+              title="Built on Trust"
+              content={`And that’s exactly what we’re offering: a long-term partnership built on integrity, commitment, and care.
               
+              Every site at Amanah starts with research. We learn your market, your customers, your edge. Then we design—from layout to copy, colors to buttons—all crafted for your audience.
 
+              We build with Next.js, the gold standard of modern web development. And instead of charging you $6,000 upfront like most “premium” studios, we offer everything for just $200/month. Why? Because we’re not here for a quick sale. We’re here to grow with you.
+
+              After launch, we don’t walk away. Want to change that headline? Add a new page? Rethink your design entirely? All included. Same price.
+
+              No gimmicks. No ghosting.
+              Just craftsmanship. Consistency. Commitment.
+              That’s Amanah.`}
+              />
 
               <ArticleQuote 
-              quote="You don't need another flashy website. You need one that works hard, runs fast, and grows your business."
-              />
-
-              <ArticleContent 
-              content="If that's what you're looking for—we're ready when you are."
+              quote="Our biggest fear? Seeing businesses settling for less."
               />
 
               {/* Call to Action */}
               <div className="">
-              <ButtonSecondary label="Get Started Today" link="/contact" />
+              <ButtonSecondary label="Get In Touch" link="/contact" />
               </div>
 
             </div>

@@ -12,7 +12,7 @@ export default function ButtonSecondary({link, label}: ButtonSecondaryProps){
         group
         w-full max-w-[240px] min-w-[160px] h-[50px] text-center flex items-center justify-center rounded-[30px] bg-[var(--primary-color)]
         text-[var(--primary-white)] font-black
-        relative 
+        relative
         transition-colors duration-300
         hover:text-[var(--primary-color)] ease-in
       `}

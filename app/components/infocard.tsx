@@ -56,10 +56,8 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
 
   // If link is provided, wrap card in Next.js Link
   return link ? (
-    <Link href={link} passHref legacyBehavior>
-      <a tabIndex={0} aria-label={title} style={{ textDecoration: 'none' }}>
-        {cardContent}
-      </a>
+    <Link href={link} tabIndex={0} aria-label={title} style={{ textDecoration: 'none', display: 'block' }}>
+      {cardContent}
     </Link>
   ) : cardContent;
 }
