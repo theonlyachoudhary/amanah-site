@@ -9,18 +9,14 @@ export default function QualityBanner() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <section className="bg-[var(--primary-color)] w-full min-h-[85vh] flex flex-col items-center justify-center py-16 md:py-20 lg:py-24 my-16 md:my-20 lg:my-24 px-4">
+    <section className="bg-[var(--primary-color)] w-full min-h-screen flex flex-col items-center justify-center py-16 md:py-20 lg:py-24 my-16 md:my-20 lg:my-24 px-4">
       <div className="sm:w-[95%] md:w-[90%] 2xl:w-[80%] flex flex-col xl:flex-row gap-8 xl:gap-12">
         <div className="w-full xl:w-[55%]">
           <h1 className="text-[var(--primary-white)] font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-left">
             WE BUILD FOR QUALITY AND PERFORMANCE
           </h1>
           <p className="text-[var(--primary-white)] text-sm sm:text-base md:text-lg font-semibold mt-4 text-left">
-            The hardest part of development is design. That's where we unfortunately see many of the
-            competition compromise, using templates or low-quality work. Here at Amanah, we work with our
-            in-house designers to deliver thoughtful, handcrafted designs built specifically for your business. 
-            Only then does it get passed to our development team who work tirelessly into making that design 
-            into a masterpiece that crushes all the metrics and wows your competition.
+            Design is where most agencies cut corners—but not us. At Amanah, every site starts with a handcrafted design tailored to your business, not a template. Once finalized, it's brought to life using modern frameworks like Next.js and clean, scalable code. Our development practices are performance‑driven from the ground up, allowing us to consistently hit 100 scores on Google Lighthouse for speed, accessibility, best practices, and SEO. We don’t just build websites—we engineer digital experiences that set the standard.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -31,7 +27,7 @@ export default function QualityBanner() {
                 </svg>
               }
               title="100% Custom Designs"
-              description="We create unique, custom designs tailored to your brand."
+              description="Unique, handcrafted designs built from scratch to match your brand—never templates."
             />
             <QualityCard
               icon={
@@ -40,7 +36,7 @@ export default function QualityBanner() {
                 </svg>
               }
               title="100 Speed Scores"
-              description="Our websites are optimized for speed and efficiency."
+              description="Blazing‑fast sites built with Next.js and clean code—engineered to hit perfect 100s on Google Lighthouse."
             />
             <QualityCard
               icon={
@@ -49,7 +45,7 @@ export default function QualityBanner() {
                 </svg>
               }
               title="SEO Optimized"
-              description="Built for search engines from the ground up."
+              description="Responsive, touch-friendly design built to look and perform flawlessly on every device."
             />
             <QualityCard
               icon={
@@ -58,7 +54,7 @@ export default function QualityBanner() {
                 </svg>
               }
               title="Mobile First"
-              description="Responsive design that works on all devices."
+              description="Clean, semantic code and best practices baked in—so your site ranks higher, faster."
             />
           </div>
         </div>
@@ -80,14 +76,10 @@ export default function QualityBanner() {
             />
           </div>
           <div className="w-full h-[400px] rounded-[10px] bg-white flex items-center justify-center overflow-hidden">
-            {!imgLoaded && (
-              <div className="w-full h-full bg-white rounded-[20px]" />
-            )}
             <img
-              src="/images/quality-banner.png"
-              alt="Quality Banner"
-              className={`w-full h-full rounded-[20px] object-cover transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-              onLoad={() => setImgLoaded(true)}
+              src="/speed-scores.webp"
+              alt="Speed Scores"
+              className="w-full h-full max-w-full rounded-[20px] object-contain object-top"
             />
           </div>
         </div>
@@ -110,14 +102,10 @@ export default function QualityBanner() {
           />
         </div>
         <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-[10px] bg-white flex items-center justify-center overflow-hidden">
-          {!imgLoaded && (
-            <div className="w-full h-full bg-white rounded-[20px]" />
-          )}
           <img
-            src="/images/quality-banner.png"
-            alt="Quality Banner"
-            className={`w-full h-full rounded-[20px] object-cover transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-            onLoad={() => setImgLoaded(true)}
+            src="/speed-scores.webp"
+            alt="Speed Scores"
+            className="w-full h-full max-w-full rounded-[20px] object-contain object-top"
           />
         </div>
       </div>

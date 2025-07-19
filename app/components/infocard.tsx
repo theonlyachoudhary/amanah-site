@@ -13,7 +13,7 @@ export default function InfoCard({ title, description, icon, link }: InfoCardPro
       className={`
         group
         w-full h-full max-w-[350px] min-h-[280px] bg-[var(--primary-white)] border-2 border-gray-200 shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-6 md:p-8 lg:p-9 relative overflow-hidden rounded-[15px]
-        transition-all duration-300
+        transition-all duration-200
         cursor-pointer
         hover:shadow-[0px_0px_25px_rgba(0,0,0,0.15)]
         hover:bg-[var(--primary-color)]

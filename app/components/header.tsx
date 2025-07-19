@@ -31,7 +31,7 @@ export default function Header() {
     <header className={`
       w-full sticky top-0 z-50
       transition-all duration-300 ease-in-out
-      bg-[var(--primary-color)]
+      bg-[var(--primary-color)] 
       ${isScrolled
         ? 'py-0 my-[20px] md:my-[30px] shadow-lg'
         : 'py-[20px] md:py-[30px]'}
@@ -42,35 +42,37 @@ export default function Header() {
           transition-all duration-300 ease-in-out shadow-lg
           ${isScrolled
             ? 'w-full rounded-none'
-            : `w-[95%] md:w-[75%] ${isMobileMenuOpen ? 'rounded-t-[8px] md:rounded-t-[10px]' : 'rounded-[8px] md:rounded-[10px]'}`
+            : `w-[90%] 2xl:w-[80%] ${isMobileMenuOpen ? 'rounded-t-[8px] md:rounded-t-[10px]' : 'rounded-[8px] md:rounded-[10px]'}`
           }
         `}>
           {/* Desktop: flex-row, logo left, menu center, button right. Mobile: unchanged */}
           <div className="flex w-full items-center">
             {/* Logo - left on all screens */}
             <div className="flex items-center ml-6 md:ml-6 md:mr-4 w-full md:w-auto justify-start static">
-              <svg className="h-[2.5em] md:h-[2.8em] w-auto" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Main monitor shape */}
-                <rect x="2" y="4" width="36" height="24" rx="4" stroke="var(--primary-color)" strokeWidth="2.5" fill="none" />
-                {/* Browser dots */}
-                <circle cx="7.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
-                <circle cx="12.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
-                <circle cx="17.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
-                {/* Web grid (subtle) */}
-                <g opacity="0.25">
-                  <line x1="6" y1="12" x2="36" y2="12" stroke="var(--primary-color)" strokeWidth="0.8" />
-                  <line x1="6" y1="18" x2="36" y2="18" stroke="var(--primary-color)" strokeWidth="0.8" />
-                  <line x1="14" y1="8" x2="14" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
-                  <line x1="22" y1="8" x2="22" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
-                </g>
-                {/* Content lines */}
-                <rect x="10" y="15" width="16" height="2" rx="1" fill="var(--primary-color)" />
-                <rect x="14" y="19" width="8" height="2" rx="1" fill="var(--primary-color)" />
-              </svg>
-              <span className="ml-[1px] flex flex-col leading-tight select-none">
-                <span className="text-xl md:text-2xl font-bold tracking-tight" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Amanah</span>
-                <span className="text-base md:text-lg font-base tracking-tight -mt-2" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Web Studio</span>
-              </span>
+              <Link href="/" className="flex items-center group" tabIndex={0} aria-label="Go to home page">
+                <svg className="h-[2.5em] md:h-[2.8em] w-auto group-hover:opacity-80 transition-opacity" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Main monitor shape */}
+                  <rect x="2" y="4" width="36" height="24" rx="4" stroke="var(--primary-color)" strokeWidth="2.5" fill="none" />
+                  {/* Browser dots */}
+                  <circle cx="7.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                  <circle cx="12.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                  <circle cx="17.5" cy="9.5" r="1.5" fill="var(--primary-color)" />
+                  {/* Web grid (subtle) */}
+                  <g opacity="0.25">
+                    <line x1="6" y1="12" x2="36" y2="12" stroke="var(--primary-color)" strokeWidth="0.8" />
+                    <line x1="6" y1="18" x2="36" y2="18" stroke="var(--primary-color)" strokeWidth="0.8" />
+                    <line x1="14" y1="8" x2="14" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
+                    <line x1="22" y1="8" x2="22" y2="26" stroke="var(--primary-color)" strokeWidth="0.8" />
+                  </g>
+                  {/* Content lines */}
+                  <rect x="10" y="15" width="16" height="2" rx="1" fill="var(--primary-color)" />
+                  <rect x="14" y="19" width="8" height="2" rx="1" fill="var(--primary-color)" />
+                </svg>
+                <span className="ml-[1px] flex flex-col leading-tight select-none">
+                  <span className="text-xl md:text-2xl font-bold tracking-tight" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Amanah</span>
+                  <span className="text-base md:text-lg font-base tracking-tight -mt-2" style={{ color: 'var(--primary-color)', fontFamily: 'Nunito, Quicksand, Poppins, Arial, sans-serif' }}>Web Studio</span>
+                </span>
+              </Link>
             </div>
             {/* Desktop Navigation Centered */}
             <div className="hidden md:flex flex-1 items-center justify-center relative">
@@ -88,64 +90,12 @@ export default function Header() {
               ABOUT
             </Link>
             
-            {/* Services Dropdown */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsServicesDropdownOpen(true)}
-              onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            <Link
+              href="#info-section"
+              className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full`}
             >
-              <span
-                className={`font-bold text-[14px] lg:text-[16px] xl:text-[18px] mx-[15px] lg:mx-[25px] xl:mx-[40px] text-center transition-all duration-300 hover:text-[var(--primary-color)] whitespace-nowrap cursor-pointer flex items-center`}
-              >
-                SERVICES
-                <svg 
-                  className={`ml-1 h-3 w-3 transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  strokeWidth="1.5" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-              </span>
-              
-              {/* Dropdown Menu with gap bridge */}
-              <div className={`
-                absolute top-full left-1/2 transform -translate-x-1/2 pt-2 w-48
-                transition-all duration-200 ease-in-out
-                ${isServicesDropdownOpen 
-                  ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                  : 'opacity-0 -translate-y-2 pointer-events-none'
-                }
-              `}>
-                <div className="bg-[var(--primary-white)] text-[var(--primary-color)] border-[3px] border-[var(--primary-color)] rounded-[5px] shadow-lg overflow-hidden">
-                  <Link
-                    href="/services/web-design"
-                    className="block px-4 py-3 text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[var(--primary-white)] transition-colors duration-200"
-                  >
-                    Web Design
-                  </Link>
-                  <Link
-                    href="/services/web-development"
-                    className="block px-4 py-3 text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[var(--primary-white)] transition-colors duration-200"
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    href="/services/e-commerce"
-                    className="block px-4 py-3 text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[var(--primary-white)] transition-colors duration-200"
-                  >
-                    E-Commerce
-                  </Link>
-                  <Link
-                    href="/services/maintenance"
-                    className="block px-4 py-3 text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[var(--primary-white)] transition-colors duration-200"
-                  >
-                    Website Maintenance
-                  </Link>
-                </div>
-              </div>
-            </div>
+              SERVICES
+            </Link>
             
             <Link
               href="/#pricing"
@@ -181,7 +131,7 @@ export default function Header() {
 
         {/* Mobile Menu Overlay - Now relative to header container */}
         <div className={`
-          md:hidden absolute left-1/2 transform -translate-x-1/2 z-40 top-full
+          md:hidden absolute left-0 right-0 z-40 top-full
           flex flex-col items-center space-y-4
           transition-all duration-200 ease-in-out overflow-hidden
           ${isMobileMenuOpen 
@@ -190,7 +140,7 @@ export default function Header() {
           }
           ${isScrolled 
             ? 'w-full' 
-            : 'w-[95%] md:w-[75%]'
+            : 'w-[90%] 2xl:w-[80%] mx-auto'
           }
         `}>
           <Link
@@ -208,7 +158,7 @@ export default function Header() {
             ABOUT
           </Link>
           <Link
-            href="/services"
+            href="#info-section"
             className="font-bold text-[16px] text-center transition-all duration-300 hover:text-[var(--primary-color)] py-2 relative after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary-color)] after:transition-all after:duration-300 hover:after:w-full"
             onClick={() => setIsMobileMenuOpen(false)}
           >
