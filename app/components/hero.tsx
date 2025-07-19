@@ -1,6 +1,4 @@
 
-
-import { motion } from 'framer-motion';
 import Button from './button';
 import ClayPhone from './clayphone';
 import ClayLaptop from './claylaptop';
@@ -17,31 +15,14 @@ export default function Hero() {
       <div className="w-full md:mx-auto md:w-[90%] 2xl:w-[80%] pt-11 flex flex-col lg:flex-row relative z-25 pb-[30px] xl:pb-0">
         <div className="flex-1 flex flex-col mr-auto p-5">
           <div className="w-full max-w-5xl text-left">
-            <motion.p
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-sm md:text-base font-semibold tracking-widest text-[var(--primary-white)] mb-3 md:mb-4"
-            >
-              HAND CRAFTED, CUSTOM CODED
-            </motion.p>
-            <motion.h1
-              initial={{ x: -120, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--primary-white)] leading-none mb-4 md:mb-6"
-            >
-              WEB STUDIO<br />
+            <p className="text-sm md:text-base font-semibold tracking-widest text-[var(--primary-white)] mb-3 md:mb-4">HAND CRAFTED, CUSTOM CODED</p>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--primary-white)] leading-none mb-4 md:mb-6">
+              WEB STUDIO<br  />
               FOR QUALITY BUSINESSES
-            </motion.h1>
-            <motion.p
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.35 }}
-              className="text-base sm:text-lg md:text-xl text-[var(--primary-white)]/90 mb-8 md:mb-10 max-w-lg"
-            >
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-[var(--primary-white)]/90 mb-8 md:mb-10 max-w-lg">
               Built by our in-house design and development teams who believe quality shouldn't be reserved for Fortune 500 budgets. Custom solutions, enterprise standards, honest pricing. Only $200 a month.
-            </motion.p>
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button label="Get Started" link="/contact" />
             </div>
