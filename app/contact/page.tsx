@@ -18,13 +18,16 @@ export default function ContactPage() {
     error: "",
     emailTouched: false,
   });
+  const [isSending, setIsSending] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setFormState((prev) => ({ ...prev, success: "", error: "" }));
+    setIsSending(true);
     const { name, email, company, message } = formState;
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       setFormState((prev) => ({ ...prev, error: "Please enter a valid email address" }));
+      setIsSending(false);
       return;
     }
     try {
@@ -47,6 +50,7 @@ export default function ContactPage() {
     } catch (err) {
       setFormState((prev) => ({ ...prev, error: "Something went wrong. Please try again later." }));
     }
+    setIsSending(false);
   }
 
   return (
@@ -101,8 +105,9 @@ export default function ContactPage() {
               <p className="font-semibold text-sm sm:text-base text-black/65">Tell us about your project or questions</p>
             </div>
             <form className="p-4 sm:p-8" onSubmit={handleSubmit}>
+              <label htmlFor="contact-name" className="sr-only">Name</label>
               <input
-                id="name"
+                id="contact-name"
                 name="name"
                 type="text"
                 className="mt-4 w-full resize-y overflow-auto rounded-lg border-2 border-gray-300 px-4 py-2 shadow-sm focus:border-[var(--primary-color)] focus:outline-none hover:border-[var(--primary-color)]"
@@ -110,9 +115,11 @@ export default function ContactPage() {
                 value={formState.name}
                 onChange={e => setFormState(prev => ({ ...prev, name: e.target.value }))}
                 required
+                aria-required="true"
               />
+              <label htmlFor="contact-email" className="sr-only">Email</label>
               <input
-                id="email"
+                id="contact-email"
                 name="email"
                 type="email"
                 className="mt-4 w-full resize-y overflow-auto rounded-lg border-2 border-gray-300 px-4 py-2 shadow-sm focus:border-[var(--primary-color)] focus:outline-none hover:border-[var(--primary-color)]"
@@ -121,6 +128,7 @@ export default function ContactPage() {
                 onChange={e => setFormState(prev => ({ ...prev, email: e.target.value }))}
                 onBlur={() => setFormState(prev => ({ ...prev, emailTouched: true }))}
                 required
+                aria-required="true"
               />
               {formState.emailTouched && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(formState.email) && (
                 <div className="mt-1 text-left text-xs text-rose-600">Please enter a valid email address</div>
@@ -134,9 +142,9 @@ export default function ContactPage() {
                 value={formState.company}
                 onChange={e => setFormState(prev => ({ ...prev, company: e.target.value }))}
               />
-              <label className="mt-5 mb-2 inline-block max-w-full font-semibold text-sm sm:text-base">How can we help you?</label>
+              <label htmlFor="contact-message" className="mt-5 mb-2 inline-block max-w-full font-semibold text-sm sm:text-base">How can we help you?</label>
               <textarea
-                id="message"
+                id="contact-message"
                 name="message"
                 className="mb-8 w-full resize-y overflow-auto rounded-lg border-2 border-gray-300 px-4 py-2 shadow-sm focus:border-[var(--primary-color)] focus:outline-none hover:border-[var(--primary-color)]"
                 rows={4}
@@ -144,6 +152,7 @@ export default function ContactPage() {
                 value={formState.message}
                 onChange={e => setFormState(prev => ({ ...prev, message: e.target.value }))}
                 required
+                aria-required="true"
               ></textarea>
               {formState.success && <div className="mb-4 text-green-600 font-semibold text-center">{formState.success}</div>}
               {formState.error && <div className="mb-4 text-rose-600 font-semibold text-center">{formState.error}</div>}
@@ -151,8 +160,10 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   className="inline-block rounded-lg bg-[var(--primary-color)] px-6 py-2 font-bold text-[var(--primary-white)] shadow hover:bg-[var(--primary-color)]/90 focus:outline-none disabled:opacity-60"
+                  disabled={isSending}
+                  aria-disabled={isSending}
                 >
-                  Send Message
+                  {isSending ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>

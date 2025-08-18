@@ -1,0 +1,20 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <pattern id="geoPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <g stroke="#fff" stroke-width="6">
+        <path d="M0,30 L30,0 L60,30 L30,60 Z" fill="none" />
+        <path d="M30,0 L30,60" />
+        <path d="M0,30 L60,30" />
+      </g>
+    </pattern>
+  </defs>
+  <!-- Geometric pattern background -->
+  <rect x="0" y="0" width="600" height="600" fill="url(#geoPattern)" />
+  <rect x="0" y="0" width="600" height="600" fill="none" />
+  <!-- Arabic text as the focus -->
+  <g>
+    <text x="300" y="300" text-anchor="middle" dominant-baseline="middle" font-family="'Cairo', sans-serif" font-size="90" fill="#1976a3" font-weight="bold" letter-spacing="8">
+      الأمانة
+    </text>
+  </g>
+</svg>

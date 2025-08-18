@@ -18,7 +18,7 @@ export default function ArticleMeta({ readTime, author, category }: ArticleMetaP
 
       {author && (
         <span className="flex items-center gap-2">
-          <svg className="w-4 h-4" style={{ color: 'var(--primary-color)' }} fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" style={{ color: 'var(--primary-color)' }} fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Author icon">
             <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.5 10.84L15.16 15.5L20.83 9.83L23.5 12.5L22 14L21 9ZM1 21H23L12 10L1 21Z"/>
           </svg>
           <span>{author}</span>

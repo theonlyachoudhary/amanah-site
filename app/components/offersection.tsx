@@ -39,8 +39,42 @@ export default function OfferSection({title, subtitle, description}: OfferSectio
             </div>
           </div>
         </div>
-        <div className="bg-[var(--primary-color)] w-full xl:w-[35%] h-[300px] sm:h-[300px] lg:h-[400px] xl:h-[600px] rounded-[10px] xl:ml-auto shadow-lg order-first lg:order-first xl:order-last">
-          {/* Additional content can go here */}
+        <div className="bg-[var(--primary-color)] w-full xl:w-[35%] h-[300px] sm:h-[300px] lg:h-[400px] xl:h-[600px] rounded-[10px] xl:ml-auto shadow-lg order-first lg:order-first xl:order-last flex items-center justify-center relative overflow-hidden border-4" style={{ borderColor: 'var(--primary-color)' }}>
+          <div
+            className="absolute inset-0 w-full h-full z-0"
+            style={{
+              width: '100%',
+              height: '100%',
+              backgroundColor: '#F3F3F3',
+              '--color': '#E1E1E1',
+              backgroundImage: `linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent)`,
+              backgroundSize: '55px 55px',
+            } as React.CSSProperties}
+          />
+          <svg
+            viewBox="0 0 600 600"
+            className="w-[90%] h-auto relative z-10"
+            style={{ pointerEvents: 'none' }}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+            <g>
+              <text
+                x="300"
+                y="320"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontFamily="'Cairo', sans-serif"
+                fontSize="160"
+                fontWeight="bold"
+                letterSpacing="8"
+                fill="var(--primary-color)"
+                style={{ fill: 'var(--primary-color)' }}
+              >
+                الأمانة
+              </text>
+            </g>
+          </svg>
         </div>
       </div>
       <div className="flex justify-center mt-6 lg:mt-8">
