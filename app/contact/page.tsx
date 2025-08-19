@@ -5,8 +5,7 @@ import React, { useState } from "react";
 
 import ButtonSecondary from "../components/buttonsecondary";
 import SecondaryHero from "../components/secondaryhero";
-import { db } from "../firebaseConfig";
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+// Contact form handling moved to API route
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -20,38 +19,53 @@ export default function ContactPage() {
   });
   const [isSending, setIsSending] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setFormState((prev) => ({ ...prev, success: "", error: "" }));
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setIsSending(true);
-    const { name, email, company, message } = formState;
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      setFormState((prev) => ({ ...prev, error: "Please enter a valid email address" }));
-      setIsSending(false);
-      return;
-    }
+
     try {
-      await addDoc(collection(db, "contacts"), {
-        name,
-        email,
-        company,
-        message,
-        createdAt: Timestamp.now(),
+      const formData = new FormData(event.currentTarget);
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        company: formData.get("company"),
+        message: formData.get("message"),
+        createdAt: new Date().toISOString(),
+      };
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
-      setFormState({
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setFormState(prev => ({
+        ...prev,
         name: "",
         email: "",
         company: "",
         message: "",
-        success: "Thank you! Your message has been sent.",
-        error: "",
-        emailTouched: false,
-      });
-    } catch (err) {
-      setFormState((prev) => ({ ...prev, error: "Something went wrong. Please try again later." }));
+        success: "Message sent successfully! We'll get back to you soon.",
+        error: ""
+      }));
+    } catch (error) {
+      setFormState(prev => ({
+        ...prev,
+        error: "Failed to send message. Please try again.",
+        success: ""
+      }));
+    } finally {
+      setIsSending(false);
     }
-    setIsSending(false);
-  }
+
+  };
 
   return (
     <section>
