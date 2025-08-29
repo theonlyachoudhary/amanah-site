@@ -13,7 +13,7 @@ export default function QualityBanner() {
       <div className="sm:w-[95%] md:w-[90%] 2xl:w-[80%] flex flex-col xl:flex-row gap-8 xl:gap-12">
         <div className="w-full xl:w-[55%]">
           <h1 className="text-[var(--primary-white)] font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-left">
-            WE BUILD FOR QUALITY AND PERFORMANCE
+            We Build For Quality and Performance
           </h1>
           <p className="text-[var(--primary-white)] text-sm sm:text-base md:text-lg font-semibold mt-4 text-left">
             Design is where most agencies cut corners—but not us. At Amanah, every site starts with a handcrafted design tailored to your business, not a template. Once finalized, it's brought to life using modern frameworks like Next.js and clean, scalable code. Our development practices are performance‑driven from the ground up, allowing us to consistently hit 100 scores on Google Lighthouse for speed, accessibility, best practices, and SEO. We don’t just build websites—we engineer digital experiences that set the standard.
@@ -64,15 +64,15 @@ export default function QualityBanner() {
           <div className="w-full flex justify-center space-x-2 mb-6 mt-auto">
             <QualityScoreCard
               title="100%"
-              description="SATISFACTION GUARANTEED"
+              description="Satisfaction Guaranteed"
             />
             <QualityScoreCard
               title="100"
-              description="PAGE SPEED SCORES"
+              description="Page Speed Scores"
             />
             <QualityScoreCard
               title="100%"
-              description="HANDCRAFTED DESIGNS"
+              description="Handcrafted Designs"
             />
           </div>
           <div className="w-full h-[400px] rounded-[10px] bg-white flex items-center justify-center overflow-hidden">
