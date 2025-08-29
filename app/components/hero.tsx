@@ -33,7 +33,7 @@ export default function Hero() {
               For Quality Businesses
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-7 max-w-lg">
-              Built by our in-house design and development teams who believe quality shouldn't be reserved for Fortune 500 budgets. Custom solutions, enterprise standards, honest pricing. Only $200 a month.
+              Built by our in-house design and development teams who believe quality shouldn't be reserved for Fortune 500 budgets. Custom solutions, enterprise standards, honest pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button label="Get Started" link="/contact" />
